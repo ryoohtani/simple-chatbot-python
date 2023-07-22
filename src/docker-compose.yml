@@ -1,0 +1,12 @@
+version: '3.11.4'
+
+services:
+  python3:
+    build: ./backend/pyfile
+    container_name: "python-csv"
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/src
+    tty: true
+#ここまでが最低限の内容

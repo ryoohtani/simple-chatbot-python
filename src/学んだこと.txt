@@ -1,0 +1,18 @@
+pythonのdockerfileについて
+RUN pip install -r requirements.txt
+
+dockerfileに上記を記載して、docker buildを行ったらrequirements.txtが存在しないためビルドエラーになる
+ホストPCとdocker環境の両方でrequirements.txtを作成して再度行ってもビルドエラーが発生する
+
+対策
+dockerfileにRUN pip install -r requirements.txt記載するのを諦めて、requirements.txtにflaskやジャンゴなどのバージョンを記載したら、
+docker buildを行い、docker環境内で手動で以下のコマンドを実施することとする
+pip install -r requirements.txt
+
+
+flask実行コマンド
+python flasks.py
+
+fastapi実行コマンド
+uvicorn fastapis:app --host 0.0.0.0 --port 8888
+fastapisのところはfile名にすること
