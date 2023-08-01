@@ -1,27 +1,10 @@
-
-#######削除機能###########
-# import csv
-
-# def copy_to_output(input_file):
-#     input_file = "./file_saving/input.csv"
-#     output_file = "./file_saving/output.csv"
-
-#     with open(input_file, "r") as file_read, open(output_file, "w", newline='') as file_write:
-#         reader = csv.reader(file_read)
-#         writer = csv.writer(file_write)
-
-#         for row in reader:
-#             writer.writerow(row)
-#########################
-
-
-
 import csv
 
-def copy_to_output(input_data):
-    output_file = "./file_saving/output.csv"
+def copy_csv_file():
+    with open("./file_saving/input.csv", mode="r") as input_file_read:
+        input_reader = csv.reader(input_file_read)
+        data_to_write = [row for row in input_reader]
 
-    with open(output_file, "w", newline='') as file_write:
-        writer = csv.writer(file_write)
-
-        writer.writerow([input_data])
+    with open("./file_saving/output.csv", mode="a", newline="") as output_file:
+        writer = csv.writer(output_file)
+        writer.writerows(data_to_write)

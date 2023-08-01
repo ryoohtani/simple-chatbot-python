@@ -1,8 +1,7 @@
-def read_csv_file(input_file):
-    input_file = "./file_saving/input.csv"
-    file_read = open(input_file)
+import csv
 
-    for line_file in file_read:
-        print(line_file)
-    
-    file_read.close()
+def read_csv_file():
+    with open("./file_saving/input.csv", mode="r") as file_read:
+        reader = csv.reader(file_read)
+        for line_csv in reader:
+            print(line_csv[0])
