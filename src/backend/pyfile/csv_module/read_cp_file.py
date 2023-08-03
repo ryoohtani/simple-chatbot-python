@@ -1,10 +1,16 @@
 import csv
+import subprocess
 
 def copy_csv_file():
     with open("./file_saving/input.csv", mode="r") as input_file_read:
         input_reader = csv.reader(input_file_read)
-        data_to_write = [row for row in input_reader]
+        #リスト内包表記を使って1行ずつリストとして格納
+        input_data = [indata for indata in input_reader]
 
-    with open("./file_saving/output.csv", mode="a", newline="") as output_file:
+    with open("./file_saving/output.csv", mode="a") as output_file:
         writer = csv.writer(output_file)
-        writer.writerows(data_to_write)
+        writer.writerows(input_data)
+
+        #ファイルの確認コマンド実行
+        inout_directory = "./file_saving/"
+        subprocess.run(["ls", "-la", inout_directory])

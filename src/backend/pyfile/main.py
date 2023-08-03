@@ -2,6 +2,7 @@ from csv_module.new_csv import make_csv_file
 from csv_module.read_file import read_csv_file
 from csv_module.read_cp_file import copy_csv_file
 
+
 def csv_file(input_file):
     if input_file != "":
         print("input.csvファイルの内容:", input_file)
