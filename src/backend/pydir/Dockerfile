@@ -4,8 +4,6 @@ WORKDIR /src
 
 COPY . /src
 
-COPY . /src/requirements.txt
-
 # パッケージの更新
 RUN apt-get update
 # キャッシュクリーンアップと不要なリストの削除
@@ -20,7 +18,4 @@ RUN pip install --upgrade setuptools
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-EXPOSE 8888
-
-# docker-compose.yml作成したら不要:ビルド後にdocker runで対象ファイルを出力するコマンド
-# CMD ["python", "main.py"]
+EXPOSE 8080

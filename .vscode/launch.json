@@ -4,21 +4,12 @@
     // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
-            "name": "Python: リモート接続",
+            "name": "Python: 現在のファイル",
             "type": "python",
-            "request": "attach",
-            "connect": {
-                "host": "localhost",
-                "port": 8888
-            },
-            "pathMappings": [
-                {
-                    "localRoot": "${workspaceFolder}",
-                    "remoteRoot": "."
-                }
-            ],
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
             "justMyCode": true
         }
     ]

@@ -1,9 +1,9 @@
-## Learning Python for the first time
-## 初めてのPythonの学習
+## Creating a chat application in Python (for learning)
+## Pythonでチャットアプリの作成(学習用)
 
-<sub> Learning to create a Python environment in docker, learning the basics of Python, and creating a function to output csv. We also created an environment to learn how to install flask and fastapi, and only check that they work. </sub>
+<sub> Developing a chat app with basic Python learning. </sub>
 
-<sub> Python環境をdocker内に作成するための学習、Pythonの基本を学習し、csvを出力する機能を作成。併せてflaskとfastapiの導入と動作確認のみ行える環境も学習のために行いました。</sub>
+<sub> Pythonの基礎学習でチャットアプリを開発中 </sub>
 
 **環境構築**
 
@@ -24,20 +24,9 @@ docker exec -it コンテナの名前 /bin/bash
 
 *Pythonのコマンド*
 
-* requirements.txt(事前にライブラリやインストールしたいもの記載)
-```
-pip install -r requirements.txt
-```
-
 * set.py(Pythonのパッケージをビルド、インストール、配布する際の必要情報記載)
 ```
 python setup.py sdist
-```
-
-FastAPI用のコマンドメモ
-* 起動コマンド
-```
-uvicorn fastapis:app --host 自身で決めたhostの番号 --port 自身で決めたportの番号 
 ```
 
 *gitコマンド*
