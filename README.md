@@ -19,7 +19,7 @@ docker-compose up -d
 ```
 * コンテナにアクセス
 ```
-docker exec -it コンテナの名前 /bin/bash
+docker exec -it python-chatbot /bin/bash
 ```
 
 *Pythonのコマンド*
@@ -53,5 +53,5 @@ git remote add origin2 URLを貼り付ける
 
 * リモートリポジトリへプッシュ
 ```
-git push -u origin main
+git push -u origin2 main
 ```
