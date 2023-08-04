@@ -48,7 +48,7 @@ git commit
 
 * ローカルリポジトリにリモートリポジトリのURLを貼り付ける
 ```
-git remote add origin URLを貼り付ける
+git remote add origin2 URLを貼り付ける
 ```
 
 * リモートリポジトリへプッシュ
