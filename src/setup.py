@@ -6,7 +6,7 @@ setup(name='python_setup',
       author='ryoohtani',
       author_email='test@gmail.com',
       url='',
-      packages=['backend.pydir'],
+      packages=['backend.pydir.sub_module'],
      )
 
 """
