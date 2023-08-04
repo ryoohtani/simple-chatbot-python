@@ -15,6 +15,8 @@ RUN pip install --upgrade pip
 
 RUN pip install --upgrade setuptools
 
+RUN pip install questionary
+
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
