@@ -2,7 +2,6 @@ import questionary
 
 class SectionModels(object):
     def all_question(self, question_one):
-        print("最後の設問")
 
         if question_one == "やっぱ王道でしょ！":
             select_routo = questionary.select(
