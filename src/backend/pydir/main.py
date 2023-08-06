@@ -1,10 +1,12 @@
 import questionary
-from sub_module.section_1 import a_end
-from sub_module.section_2 import b_end
-from sub_module.section_3 import c_end
 
-def main_bot():
-    print("おすすめ検索エンジン紹介！！")
+from models.model_section import SectionModels
+from views.view_section import SectionViews
+
+def main():
+
+    view_main = SectionViews()
+    view_main.first_show()
 
     question_one = questionary.select(
         "好きなの方は？",
@@ -12,12 +14,10 @@ def main_bot():
         use_arrow_keys = True
     ).ask()
 
-    if question_one == "やっぱ王道でしょ！":
-        a_end()
-    elif question_one == "やっぱ人と違うのでしょ！":
-        b_end()
-    else:
-        c_end()
+    view_main.last_show()
+
+    modele_main = SectionModels()
+    modele_main.all_question(question_one)
         
 if __name__ == "__main__": 
-    main_bot()
+    main()
