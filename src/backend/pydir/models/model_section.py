@@ -9,6 +9,7 @@ class SectionModels(object):
                 choices = ["Chrome", "Safari"],
                 use_arrow_keys = True
             ).ask()
+            
             if select_routo == "Chrome":
                 print("あなたにオススメなサイトはChromeです!\n", "https://www.google.co.jp/")
             else:
