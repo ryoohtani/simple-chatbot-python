@@ -1,38 +1,40 @@
 import questionary
+from .model_csvcount import CSVCounter
 
 class SectionModels(object):
-    def all_question(self, question_one):
+    def __init__(self):
+        self.aggregation_counter = CSVCounter()
+        self.select_routo = None
 
+    def all_question(self, question_one):
         if question_one == "やっぱ王道でしょ！":
-            select_routo = questionary.select(
+            self.select_routo = questionary.select(
                 "スマホに入れているアプリは？",
-                choices = ["Chrome", "Safari"],
-                use_arrow_keys = True
+                choices=["Chrome", "Safari"],
+                use_arrow_keys=True
             ).ask()
-            
-            if select_routo == "Chrome":
-                print("あなたにオススメなサイトはChromeです!\n", "https://www.google.co.jp/")
-            else:
-                print("あなたにオススメなサイトはSafariです!\n", "https://www.apple.com/safari/")
+
+            #{}のプレースホルダーとformat関数を合わせることで、self.select_routo変数の中身を柔軟に使えるようにしました。
+            print("あなたにオススメなサイトは{}です!\n".format(self.select_routo), "https://www.google.co.jp/")
 
         elif question_one == "やっぱ人と違うのでしょ！":
-            select_routo = questionary.select(
+            self.select_routo = questionary.select(
                 "PCに入れているアプリは？",
                 choices = ["FireFox", "Bing"],
                 use_arrow_keys = True
             ).ask()
-            if select_routo == "FireFox":
-                print("あなたにオススメなサイトはFireFoxです!\n", "https://www.mozilla.org/firefox/")
-            else:
-                print("あなたにオススメなサイトはBingです!\n", "https://www.bing.com/")
+
+            print("あなたにオススメなサイトは{}です!\n".format(self.select_routo), "https://www.mozilla.org/firefox/" if self.select_routo == "FireFox" else "https://www.bing.com/")
 
         else:
-            select_routo = questionary.select(
+            self.select_routo = questionary.select(
                 "検索エンジンぐらいは冒険してみませんか？",
-                choices = ["YANDEX", "DuckDuckGo"],
+                choices=["YANDEX", "DuckDuckGo"],
                 use_arrow_keys = True
             ).ask()
-            if select_routo == "YANDEX":
-                print("あなたにオススメなサイトはYANDEXです!\n", "https://yandex.com/")
-            else:
-                print("あなたにオススメなサイトはDuckDuckGoです!\n", "https://duckduckgo.com/")
+
+            print("あなたにオススメなサイトは{}です!\n".format(self.select_routo), "https://yandex.com/" if self.select_routo == "YANDEX" else "https://duckduckgo.com/")
+
+        #アプリの選択を実施する=Noneではないので、self.select_routo変数に代入される。if文内が実施される
+        if self.select_routo is not None:
+            self.aggregation_counter.increment_vote_count(self.select_routo)
