@@ -37,4 +37,4 @@ class SectionModels(object):
 
         #アプリの選択を実施する=Noneではないので、self.select_routo変数に代入される。if文内が実施される
         if self.select_routo is not None:
-            self.aggregation_counter.increment_vote_count(self.select_routo)
+            self.aggregation_counter.increment_aggregation_count(self.select_routo)
