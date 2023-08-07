@@ -1,13 +1,9 @@
 import questionary
 
-from models.model_section import SectionModels
-from models.model_csvcount import make_csv_file
 from views.view_section import SectionViews
-
-
+from models.model_section import SectionModels
 
 def main():
-
     view_main = SectionViews()
     view_main.first_show()
 
@@ -22,7 +18,5 @@ def main():
     model_main = SectionModels()
     model_main.all_question(question_one)
 
-    make_csv_file(model_main)
-        
 if __name__ == "__main__": 
     main()
