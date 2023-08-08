@@ -58,4 +58,4 @@ git push -u origin2 main
 
 実際のアプリの画像
 
-![part0](/Users/ohtaniryo/part0.png)
+<img width="361" alt="part0" src="https://github.com/ryoohtani/simple-chatbot-python/assets/139527783/1ab55e10-074c-493f-9880-7be1a2e7e936">
