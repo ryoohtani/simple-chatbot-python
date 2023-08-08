@@ -55,3 +55,7 @@ git remote add origin2 URLを貼り付ける
 ```
 git push -u origin2 main
 ```
+
+実際のアプリの画像
+
+![part0](/Users/ohtaniryo/part0.png)
