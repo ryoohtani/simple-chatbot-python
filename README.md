@@ -79,11 +79,16 @@ git merge origin2/main
 *アプリの起動*
 * use_arrow_keys=Trueにより、キーボードの十字キーで操作可能
 
-<img width="394" alt="part1" src="https://github.com/ryoohtani/simple-chatbot-python/assets/139527783/739ed7b0-9cb4-45fd-a3df-7959107733b2">
+<img width="388" alt="スクリーンショット 2023-08-09 9 03 31" src="https://github.com/ryoohtani/simple-chatbot-python/assets/139527783/f081d7f1-bf26-4909-bd05-7fac3393c67a">
 
 *最終設問*
 
-<img width="402" alt="part2" src="https://github.com/ryoohtani/simple-chatbot-python/assets/139527783/c514a2b2-98c1-4aba-b66a-9fcbde30b7bf">
+<img width="413" alt="スクリーンショット 2023-08-09 9 04 04" src="https://github.com/ryoohtani/simple-chatbot-python/assets/139527783/66c17167-233a-4da6-b55c-ac3e113797d4">
+
+*アプリ終了*
+*終了画面
+
+<img width="404" alt="スクリーンショット 2023-08-09 9 04 33" src="https://github.com/ryoohtani/simple-chatbot-python/assets/139527783/29f7f42b-5c6f-4f83-ad45-610b127a95b2">
 
 *アプリ実行後のデータ(aggregation.csv)*
 * model_section.pyによりデータの取集を行なったアウトプットの結果をcsvに記載
