@@ -70,6 +70,22 @@ git checkout main
 ```
 git merge origin2/main
 ```
+
+**Pythonコードスタイルガイド**
+* pep8
+```
+pep8 対象ファイル
+```
+
+* flake8
+```
+flake8 対象ファイル
+```
+
+* pylint
+```
+pylint 対象ファイル
+```
 ---
 *実際のアプリの画像*
 * アプリ実行前のデータ(aggregation.csv)
