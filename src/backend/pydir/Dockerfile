@@ -18,6 +18,11 @@ RUN pip install --upgrade setuptools
 # questionaryライブラリ(選択機能)
 RUN pip install questionary
 
+# コードスタイルの制約をするライブラリ
+RUN pip install --upgrade pep8
+RUN pip install --upgrade flake8
+RUN pip install --upgrade pylint
+
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
