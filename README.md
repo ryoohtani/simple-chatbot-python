@@ -19,7 +19,7 @@ docker compose up -d
 ```
 * コンテナにアクセス
 ```
-docker exec -it python-chatbot /bash
+docker exec -it python-chatbot bash
 ```
 
 *Pythonのコマンド*
