@@ -11,15 +11,15 @@
 
 * ビルドコマンド
 ```
-docker-compose build
+docker compose build
 ```
 * 環境の立ち上げ
 ```
-docker-compose up -d
+docker compose up -d
 ```
 * コンテナにアクセス
 ```
-docker exec -it python-chatbot /bin/bash
+docker exec -it python-chatbot /bash
 ```
 
 *Pythonのコマンド*
